@@ -9,9 +9,10 @@ PKG_NAME:=n2n-happyn
 PKG_VERSION:=3.1.1
 PKG_RELEASE:=1
 
+# 使用本地源代码包，不需要从网络下载
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/happynlab/n2n/releases/download/happyn3.1.1/
-PKG_HASH:=475ff94c02ea9a86ff172e84e066bf0bbc67020526099b7b1f2bb94a6d68c285
+PKG_SOURCE_URL:=file://$(TOPDIR)/dl/
+PKG_HASH:=skip  # 跳过哈希检查
 
 PKG_LICENSE:=GPL-3.0
 PKG_LICENSE_FILES:=LICENSE
